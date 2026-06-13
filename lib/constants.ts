@@ -143,12 +143,36 @@ export const teamMembers = [
 ];
 
 export const partners = [
-  { name: "Ethiopian Ministry of Women and Social Affairs" },
-  { name: "United Nations Development Programme" },
-  { name: "African Union Commission" },
-  { name: "Ethiopian Red Cross Society" },
-  { name: "Addis Ababa University" },
-  { name: "World Food Programme" },
+  {
+    name: "Ethiopian Ministry of Women and Social Affairs",
+    image: "https://images.unsplash.com/photo-1573164574572-cb89e39749f4?w=400&q=80",
+    description: "Government Partner",
+  },
+  {
+    name: "United Nations Development Programme",
+    image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=400&q=80",
+    description: "Development Partner",
+  },
+  {
+    name: "African Union Commission",
+    image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=400&q=80",
+    description: "Continental Partner",
+  },
+  {
+    name: "Ethiopian Red Cross Society",
+    image: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=400&q=80",
+    description: "Humanitarian Partner",
+  },
+  {
+    name: "Addis Ababa University",
+    image: "https://images.unsplash.com/photo-1562774053-701939374585?w=400&q=80",
+    description: "Academic Partner",
+  },
+  {
+    name: "World Food Programme",
+    image: "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=400&q=80",
+    description: "Food Security Partner",
+  },
 ];
 
 export const programs = [

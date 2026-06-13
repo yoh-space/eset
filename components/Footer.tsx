@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Heart, Mail, Phone, MapPin } from "lucide-react";
+import Image from "next/image";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { navLinks, contactInfo } from "@/lib/constants";
 
 export default function Footer() {
@@ -8,11 +9,14 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <Heart className="h-6 w-6 text-gold" />
-              <span className="text-lg font-bold text-white">
-                ESSET LETIWLID
-              </span>
+            <Link href="/" className="inline-block mb-4">
+              <Image
+                src="/esset_horizontal_logo.png"
+                alt="ESSET LETIWLID"
+                width={240}
+                height={60}
+                className="h-16 sm:h-20 w-auto brightness-0 invert"
+              />
             </Link>
             <p className="text-sm leading-relaxed text-gray-400">
               Dedicated to improving lives and building a brighter future for
