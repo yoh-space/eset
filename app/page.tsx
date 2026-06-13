@@ -1,49 +1,48 @@
 import Link from "next/link";
-import { ArrowRight, Heart, ChevronRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { missionPillars, impactStats, programs, partners } from "@/lib/constants";
 import PillarCard from "@/components/PillarCard";
 import ProgramCard from "@/components/ProgramCard";
 import NewsletterForm from "@/components/NewsletterForm";
 import { StackedCardsInteraction } from "@/components/ui/stacked-cards-interaction";
+import HeroActionButton from "@/components/HeroActionButton";
+import VideoHero from "@/components/VideoHero";
+import { PartnersSection } from "@/components/sections/partners-section";
 
 export default function Home() {
   return (
     <div className="overflow-x-hidden w-full">
-      {/* Hero */}
-      <section className="relative min-h-screen flex items-center bg-gradient-to-br from-primary via-primary-dark to-gray-900 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=1920&q=80')] bg-cover bg-center opacity-30" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary-dark/60 to-primary-dark" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 sm:py-40 w-full">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight tracking-tight">
-              Empowering communities,<br />
-              <span className="text-gold">transforming lives.</span>
-            </h1>
-            <p className="mt-6 text-lg sm:text-xl text-gray-200 leading-relaxed max-w-2xl">
-              ESSET LETIWLID works across 7 pillars — food security, cultural
-              heritage, youth empowerment, environment, women & children's
-              rights, community health, and ethics — to build a brighter future
-              for Ethiopia.
-            </p>
-            <div className="mt-10 flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/get-involved"
-                className="inline-flex items-center justify-center gap-2 bg-gold hover:bg-gold-dark text-white px-8 py-3.5 rounded-full text-base font-semibold transition-all hover:shadow-xl"
-              >
-                Donate Now
-                <Heart className="h-5 w-5" />
-              </Link>
-              <Link
-                href="/about"
-                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-8 py-3.5 rounded-full text-base font-semibold backdrop-blur-sm transition-all border border-white/20"
-              >
-                Learn More
-                <ChevronRight className="h-5 w-5" />
-              </Link>
+      <VideoHero video="/heroBackgroundVideo/Herobackground.webm">
+        <section className="relative min-h-screen flex items-center bg-gradient-to-br from-primary/70 via-primary-dark/70 to-gray-900/70 text-white">
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary-dark/60 to-primary-dark/80" />
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 sm:py-40 w-full z-10">
+            <div className="max-w-3xl">
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight tracking-tight">
+                Empowering communities,<br />
+                <span className="text-gold">transforming lives.</span>
+              </h1>
+              <p className="mt-6 text-lg sm:text-xl text-gray-200 leading-relaxed max-w-2xl">
+                ESSET LETIWLID works across 7 pillars — food security, cultural
+                heritage, youth empowerment, environment, women & children's
+                rights, community health, and ethics — to build a brighter future
+                for Ethiopia.
+              </p>
+              <div className="mt-10 flex flex-col sm:flex-row gap-6">
+                <HeroActionButton
+                  href="/get-involved"
+                  primaryText="Donate Now"
+                  hoverText="Make an Impact"
+                />
+                <HeroActionButton
+                  href="/about"
+                  primaryText="Learn More"
+                  hoverText="Our Mission"
+                />
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </VideoHero>
 
       {/* Mission */}
       <section className="py-20 bg-surface">
@@ -146,7 +145,7 @@ export default function Home() {
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {programs.map((program) => (
               <ProgramCard
                 key={program.title}
@@ -160,45 +159,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Partners */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="text-xs font-semibold text-gold uppercase tracking-[0.2em]">
-              Our Network
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3">
-              Partners & Affiliates
-            </h2>
-            <p className="mt-3 text-gray-500 max-w-xl mx-auto">
-              We collaborate with leading organizations to amplify our impact
-              across Ethiopia and beyond.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {partners.map((partner) => (
-              <div
-                key={partner.name}
-                className="group relative bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:border-primary/20 hover:bg-white transition-all duration-300 hover:shadow-lg hover:shadow-primary/5"
-              >
-                <div className="aspect-[4/3] mb-4 rounded-xl overflow-hidden bg-white">
-                  <img
-                    src={partner.image}
-                    alt={partner.name}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <h3 className="text-sm font-semibold text-gray-900 leading-tight group-hover:text-primary transition-colors">
-                  {partner.name}
-                </h3>
-                <p className="text-xs text-gray-400 mt-1">
-                  {partner.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <PartnersSection />
 
       <NewsletterForm />
     </div>

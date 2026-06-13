@@ -31,13 +31,15 @@ export default function GetInvolvedPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-primary to-primary-dark text-white py-20 sm:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-gradient-to-br from-primary to-primary-dark text-white py-20 sm:py-28 overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/bannerImages/get-involved-banner.jpg')] bg-cover bg-center opacity-25" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/20 to-primary-dark/30" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-4xl sm:text-5xl font-bold leading-tight">
               Get Involved
             </h1>
-            <p className="mt-4 text-lg text-primary/80 leading-relaxed">
+            <p className="mt-4 text-lg text-white/80 leading-relaxed">
               There are many ways to support our mission and make a lasting
               difference in Ethiopian communities.
             </p>

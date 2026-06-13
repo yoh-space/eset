@@ -181,21 +181,49 @@ export const programs = [
     pillar: "Food Security",
     description:
       "A comprehensive program providing emergency food assistance, agricultural training, and sustainable farming resources to vulnerable families in drought-prone regions of Ethiopia.",
-    image: "/programs/food-security.jpg",
+    image: "/ProgramCardImages/Food.jpg",
   },
   {
     title: "Cultural Heritage Digitization Project",
     pillar: "Cultural Heritage Preservation",
     description:
       "Working with local communities to document, preserve, and promote Ethiopia's intangible and tangible cultural heritage through digital archiving and restoration.",
-    image: "/programs/heritage.jpg",
+    image: "/ProgramCardImages/culturalPreseravation.jpg",
   },
   {
     title: "Digital Futures Academy",
     pillar: "Youth Technology Empowerment",
     description:
       "A network of technology training centers offering coding bootcamps, digital literacy courses, and entrepreneurship incubation for Ethiopian youth.",
-    image: "/programs/tech.jpg",
+    image: "/ProgramCardImages/youthTechnology.jpg",
+  },
+  {
+    title: "Green Ethiopia Initiative",
+    pillar: "Environment & Biodiversity",
+    description:
+      "Community-led reforestation, wildlife conservation, and sustainable land management programs restoring Ethiopia's natural ecosystems for future generations.",
+    image: "/ProgramCardImages/Environment.jpg",
+  },
+  {
+    title: "Rights & Protection Program",
+    pillar: "Women, Children, Disabled & Elderly Rights",
+    description:
+      "Advocating for and protecting the rights of women, children, persons with disabilities, and the elderly through legal aid, economic empowerment, and inclusive services.",
+    image: "/ProgramCardImages/childProtection.jpg",
+  },
+  {
+    title: "Healthy Communities Project",
+    pillar: "Community Health & Education",
+    description:
+      "Improving healthcare access, health awareness, and educational outcomes in underserved communities through infrastructure, training, and direct service delivery.",
+    image: "/ProgramCardImages/community.jpg",
+  },
+  {
+    title: "Ethical Leadership & Mentorship",
+    pillar: "Ethics & Moral Development",
+    description:
+      "Building a generation of ethical leaders through mentorship programs, values-based training, and community dialogue forums that strengthen social cohesion.",
+    image: "/ProgramCardImages/Ethics%20%26%20Moral%20Development.jpg",
   },
 ];
 
