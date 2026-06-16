@@ -87,3 +87,106 @@ body {
   }
 }
 
+/* 3D Glass Card */
+.glass-card-parent {
+  perspective: 1000px;
+}
+
+.glass-card {
+  transform-style: preserve-3d;
+}
+
+.glass-card-glass {
+  transform-style: preserve-3d;
+  transform: translate3d(0px, 0px, 25px);
+  transition: all 0.5s ease-in-out;
+}
+
+.glass-card-content {
+  transform: translate3d(0, 0, 26px);
+}
+
+.glass-card-bottom {
+  transform-style: preserve-3d;
+  transform: translate3d(0, 0, 26px);
+}
+
+.glass-card-logo {
+  transform-style: preserve-3d;
+}
+
+.glass-card-circle {
+  transform-style: preserve-3d;
+  transition: all 0.5s ease-in-out;
+}
+
+.glass-card-circle1 {
+  transform: translate3d(0, 0, 20px);
+}
+
+.glass-card-circle2 {
+  transform: translate3d(0, 0, 40px);
+  transition-delay: 0.4s;
+}
+
+.glass-card-circle3 {
+  transform: translate3d(0, 0, 60px);
+  transition-delay: 0.8s;
+}
+
+.glass-card-circle4 {
+  transform: translate3d(0, 0, 80px);
+  transition-delay: 1.2s;
+}
+
+.glass-card-circle5 {
+  transform: translate3d(0, 0, 100px);
+  transition-delay: 1.6s;
+}
+
+.glass-card-social-btn {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.glass-card-social-btn:nth-child(1) {
+  transition-delay: 0.4s;
+}
+
+.glass-card-social-btn:nth-child(2) {
+  transition-delay: 0.6s;
+}
+
+.glass-card-social-btn:nth-child(3) {
+  transition-delay: 0.8s;
+}
+
+.glass-card-parent:hover .glass-card {
+  transform: rotate3d(1, 1, 0, 30deg);
+  box-shadow: rgba(5, 71, 17, 0.3) 30px 50px 25px -40px, rgba(5, 71, 17, 0.1) 0px 25px 30px 0px;
+}
+
+.glass-card-parent:hover .glass-card-social-btn {
+  transform: translate3d(0, 0, 50px);
+  box-shadow: rgba(5, 71, 17, 0.2) -5px 20px 10px 0px;
+}
+
+.glass-card-parent:hover .glass-card-circle2 {
+  transform: translate3d(0, 0, 60px);
+}
+
+.glass-card-parent:hover .glass-card-circle3 {
+  transform: translate3d(0, 0, 80px);
+}
+
+.glass-card-parent:hover .glass-card-circle4 {
+  transform: translate3d(0, 0, 100px);
+}
+
+.glass-card-parent:hover .glass-card-circle5 {
+  transform: translate3d(0, 0, 120px);
+}
+
+.glass-card-parent:hover .glass-card-view-more {
+  transform: translate3d(0, 0, 10px);
+}
+

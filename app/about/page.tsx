@@ -122,15 +122,15 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
+            <span className="inline-block text-xs font-semibold text-primary uppercase tracking-[0.25em] mb-4 bg-primary/5 px-4 py-1.5 rounded-full">
               Our Team
-            </h2>
-            <p className="mt-3 text-lg text-gray-600">
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
               Dedicated professionals committed to serving Ethiopian communities
-            </p>
+            </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
             {teamMembers.map((member) => (

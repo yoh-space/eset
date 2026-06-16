@@ -1,13 +1,14 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { missionPillars, impactStats, programs, partners } from "@/lib/constants";
-import PillarCard from "@/components/PillarCard";
+import { missionPillars, programs } from "@/lib/constants";
+import GlassPillarCard from "@/components/GlassPillarCard";
 import ProgramCard from "@/components/ProgramCard";
 import NewsletterForm from "@/components/NewsletterForm";
-import { StackedCardsInteraction } from "@/components/ui/stacked-cards-interaction";
 import HeroActionButton from "@/components/HeroActionButton";
 import VideoHero from "@/components/VideoHero";
+import ImpactSection from "@/components/ImpactSection";
 import { PartnersSection } from "@/components/sections/partners-section";
+import { TestimonialsSection } from "@/components/sections/testimonials-section";
 
 export default function Home() {
   return (
@@ -59,9 +60,9 @@ export default function Home() {
               reflect the full spectrum of human need and potential.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="flex flex-wrap justify-center gap-8">
             {missionPillars.map((pillar) => (
-              <PillarCard
+              <GlassPillarCard
                 key={pillar.id}
                 icon={pillar.icon}
                 title={pillar.title}
@@ -72,58 +73,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Impact Stats */}
-      <section className="py-20 bg-primary text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl sm:text-4xl font-bold">Our Impact</h2>
-              <p className="mt-3 text-lg text-primary/80">
-                Measurable results that reflect our commitment to change
-              </p>
-              <div className="mt-10 grid grid-cols-2 gap-6">
-                {impactStats.map((stat) => (
-                  <div key={stat.label} className="text-center group">
-                    <div className="text-3xl sm:text-4xl font-bold text-gold mb-1">
-                      {stat.number}
-                    </div>
-                    <div className="text-sm text-white/70 font-medium">
-                      {stat.label}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="flex justify-center lg:justify-end">
-              <StackedCardsInteraction
-                cards={[
-                  {
-                    image:
-                      "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80",
-                    title: "15,000+ Families Supported",
-                    description:
-                      "Food security and livelihood assistance reaching vulnerable households across Ethiopia.",
-                  },
-                  {
-                    image:
-                      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&q=80",
-                    title: "8,000+ Youth Trained",
-                    description:
-                      "Digital skills, entrepreneurship, and leadership training for Ethiopia's next generation.",
-                  },
-                  {
-                    image:
-                      "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&q=80",
-                    title: "120+ Communities Reached",
-                    description:
-                      "Community-driven development programs spanning multiple regions of Ethiopia.",
-                  },
-                ]}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <ImpactSection />
 
       {/* Featured Programs */}
       <section className="py-20">
@@ -160,6 +110,8 @@ export default function Home() {
       </section>
 
       <PartnersSection />
+
+      <TestimonialsSection />
 
       <NewsletterForm />
     </div>

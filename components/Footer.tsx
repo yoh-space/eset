@@ -102,8 +102,16 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} ESSET LETIWLID Charitable
             Organization. All rights reserved.
           </p>
-          <p className="text-sm text-gray-500">
-            Registration No: {contactInfo.registrationNumber}
+          <p className="text-sm text-gray-400">
+            Developed by{" "}
+            <a
+              href="https://www.yotech.space"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold hover:text-gold-light underline underline-offset-2 transition-colors"
+            >
+              YoTech Digitals
+            </a>
           </p>
         </div>
       </div>

@@ -114,31 +114,31 @@ export const teamMembers = [
     name: "Dr. Alemseged Hailu",
     role: "Executive Director",
     bio: "Over 20 years of experience in humanitarian and development work across Ethiopia. Former senior advisor at the Ministry of Women and Social Affairs.",
-    image: "/team/placeholder-1.jpg",
+    image: "",
   },
   {
     name: "Ms. Tigist Worku",
     role: "Programs Director",
     bio: "Expert in community development and program management with 15 years of experience leading multi-sectoral initiatives in rural Ethiopia.",
-    image: "/team/placeholder-2.jpg",
+    image: "",
   },
   {
     name: "Mr. Biruk Tadesse",
     role: "Finance & Administration Manager",
     bio: "Chartered accountant with extensive experience in NGO financial management, compliance, and organizational development.",
-    image: "/team/placeholder-3.jpg",
+    image: "",
   },
   {
     name: "Dr. Selam Ayele",
     role: "Health & Education Lead",
     bio: "Public health specialist with a decade of experience designing and implementing community health programs in underserved regions.",
-    image: "/team/placeholder-4.jpg",
+    image: "",
   },
   {
     name: "Mr. Dawit Eshetu",
     role: "Youth Empowerment Coordinator",
     bio: "Passionate advocate for youth development with expertise in digital skills training, entrepreneurship education, and mentorship program design.",
-    image: "/team/placeholder-5.jpg",
+    image: "",
   },
 ];
 
